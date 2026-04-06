@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="SeasonOfRiverbend"
+run/main_scene="res://scenes/world/WorldRoot.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+TimeManager="*res://scripts/autoload/time_manager.gd"
+WeatherManager="*res://scripts/autoload/weather_manager.gd"
+WorldManager="*res://scripts/autoload/world_manager.gd"
+SimulationManager="*res://scripts/autoload/simulation_manager.gd"
 
 [physics]
 
