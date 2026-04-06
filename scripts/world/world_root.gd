@@ -5,7 +5,7 @@ extends Node2D
 
 func _ready() -> void:
 	if camera and WorldManager and debug_view:
-		var tile_size: int = debug_view.get("tile_size") as int
+		var tile_size: int = WorldManager.cell_size
 		var w: int = WorldManager.world_width * tile_size
 		var h: int = WorldManager.world_height * tile_size
 		camera.position = Vector2(w * 0.5, h * 0.5)

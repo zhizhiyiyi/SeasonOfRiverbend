@@ -45,6 +45,10 @@ func advance_minutes(minutes: int) -> void:
 	total_minutes_elapsed += minutes
 	_emit_time_events()
 
+func set_total_minutes(minutes: int) -> void:
+	total_minutes_elapsed = max(minutes, 0)
+	_emit_time_events()
+
 func get_day_index() -> int:
 	return total_minutes_elapsed / MINUTES_PER_DAY
 

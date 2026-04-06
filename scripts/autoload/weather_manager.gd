@@ -54,6 +54,11 @@ func _try_transition() -> void:
 	current_weather = next
 	emit_signal("weather_changed", int(current_weather))
 
+func set_current_weather(new_weather: int, emit_changed: bool) -> void:
+	current_weather = clampi(new_weather, WeatherType.CLEAR, WeatherType.SNOW)
+	if emit_changed:
+		emit_signal("weather_changed", int(current_weather))
+
 func _roll_weather_for_season(season: int) -> int:
 	var roll := _rng.randf()
 	match season:

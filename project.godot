@@ -21,6 +21,7 @@ TimeManager="*res://scripts/autoload/time_manager.gd"
 WeatherManager="*res://scripts/autoload/weather_manager.gd"
 WorldManager="*res://scripts/autoload/world_manager.gd"
 SimulationManager="*res://scripts/autoload/simulation_manager.gd"
+SaveManager="*res://scripts/autoload/save_manager.gd"
 
 [physics]
 

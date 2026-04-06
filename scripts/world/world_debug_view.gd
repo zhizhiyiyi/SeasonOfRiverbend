@@ -17,6 +17,8 @@ var _terrain_colors := {
 
 func _ready() -> void:
 	if WorldManager:
+		tile_size = WorldManager.cell_size
+	if WorldManager:
 		WorldManager.world_generated.connect(_on_world_generated)
 	if TimeManager:
 		TimeManager.minute_advanced.connect(_on_time_advanced)
